@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  resize: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(31 41 55 / 1);
+}
+
+body #container {
+  width: 30vw;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(75 85 99 / 1);
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  gap: 40px;
+}
+
+body #container h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: rgb(96 165 250 / 1);
+  line-height: 1;
+}
+
+body #container form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0px 40px;
+
+}
+
+body #container form #inputs-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+body #container form #inputs-box #password-input-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+body #container form #inputs-box #password-input-box #eye {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body #container form #inputs-box #password-input-box #eye svg {
+  width: fit-content;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  cursor: pointer;
+  stroke: white;
+}
+
+body #container form #inputs-box div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 4px;
+}
+
+body #container form #inputs-box div label {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(255 255 255 / 1);
+  padding-left: 6px;
+}
+
+body #container form #inputs-box div input {
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+  background-color: rgb(55 65 81 / 1);
+  color: rgb(255 255 255 / 1);
+  padding: 0px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+
+body #container form #submit {
+ width: 100%;
+ height: 45px;
+ border-radius: 8px;
+ background-color: rgb(96 165 250 / 1);
+ color: rgb(255 255 255 / 1);
+ font-size: 16px;
+ font-weight: 500;
+ outline: none;
+ border: none;
+ cursor: pointer;
+  transition: all .4s ease;
+}
+
+body #container form #submit:hover {
+  transform: translateY(-5px);
+}
+
+@media screen and (min-width: 1576px) {
+  body #container {
+  height: 60vh;
+}
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clients</title>
+    <link href="./styles/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <section
+      class="w-screen h-screen flex justify-center px-[10%] flex-col bg-gray-800"
+    >
+      <h1 class="text-blue-400 text-2xl">Client</h1>
+      <div class="flex gap-5 text-white">
+
+        <a href="http://localhost:3355/">voltar</a>
+        <a href="http://localhost:3355/products">Produtos</a>
+      </div>
+      <h2 class="text-white">Clientes:</h2>
+
+      <div class="flex w-full gap-[40px]">
+        <div
+          class="bg-gray-600 flex h-[500px] w-[70%] flex-col gap-8 px-10 py-5 rounded-2xl"
+        >
+          <div
+            style="background: #ffffff20; margin-bottom: 33px"
+            class="bg-gray-500 place-items-center py-2 text-white px-10 rounded-lg grid grid-cols-4"
+          >
+            <span class="w-full flex justify-center">Nome</span>
+            <span class="w-full flex justify-center">Email</span>
+            <span class="w-full flex justify-center">Idade</span>
+            <span class="w-full flex justify-center">Deletar</span>
+          </div>
+          <div
+            class="flex overflow-x-scroll w-full flex-col gap-5"
+            id="clients"
+          ></div>
+        </div>
+        <form id="ClientForm" class="w-[30%] flex flex-col gap-3">
+          <div>
+            <input
+              class="w-2/4 h-10 rounded-lg border border-blue-500"
+              id="name"
+              placeholder="Nome"
+              type="text"
+            />
+            <input
+              class="w-2/4 h-10 rounded-lg border border-blue-500"
+              id="lastname"
+              placeholder="Sobrenome"
+              type="text"
+            />
+          </div>
+          <div>
+            <input
+              class="w-2/4 h-10 rounded-lg border border-blue-500"
+              id="email"
+              placeholder="Email"
+              type="text"
+            />
+            <input
+              class="w-2/4 h-10 rounded-lg border border-blue-500"
+              id="age"
+              placeholder="Idade"
+              type="number"
+            />
+          </div>
+          <button
+            style="background-color: rgb(59 130 246 / var(--tw-bg-opacity))"
+            type="submit"
+            class="w-full h-10 rounded-lg"
+          >
+            Criar
+          </button>
+        </form>
+      </div>
+      <h1 id="requestMessage" ></h1>
+    </section>
+
+    <script src="scripts/api.js"></script>
+  </body>
+</html>
