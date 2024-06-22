@@ -6,9 +6,9 @@ const { app } = require('../server') //eslint-disable-line
 describe('POST /api/clients', () => {
   it('deve permitir campos nome e sobrenome válidos (entre 3 e 255 caracteres), email válido e idade positiva e menor que 120', async () => {
     const validClient = {
-      nome: 'Joabe',
+      nome: 'Joana',
       sobrenome: 'Silva',
-      email: 'joabe.silva@example.com',
+      email: 'joana.silva@example.com',
       idade: 30,
       foto: 'https://example.com/joabe.jpg'
     }
@@ -47,9 +47,9 @@ function isValidEmail (email) {
 describe('POST /api/poducts', () => {
   it('deve permitir adicionar um produto com nome, descrição, preço positivo e data válida', async () => {
     const validProduct = {
-      name: 'Produto Teste',
-      description: 'Descrição do Produto Teste',
-      price: 99.99,
+      name: 'Produto',
+      description: 'Descrição do Produto',
+      price: 49.99,
       data_atualizado: new Date('2024-06-20T00:00:00Z')
     }
 
