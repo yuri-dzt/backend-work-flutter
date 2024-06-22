@@ -31,8 +31,10 @@ app.get('/products', (req: Request, res: Response) => {
 const port = process.env.DEV_PORT ? Number(process.env.DEV_PORT) : 3000
 
 app.listen(port, () => {
-  console.log(`api running on port ${port}`)
+  // console.log(`api running on port ${port}`)
 })
+
+export { app, port }
 
 /**
  * install npm
