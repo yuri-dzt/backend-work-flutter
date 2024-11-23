@@ -1,9 +1,9 @@
 import { type Request, type Response } from 'express'
 import DeleteProductModel from '../../models/products/deleteProductModel'
 
-export async function DeleteProductController (req: Request, res: Response) {
+export async function DeleteProductController(req: Request, res: Response) {
   try {
-    const { id } = req.params
+    const { id } = req.body
     const response = await DeleteProductModel(id)
     res.status(200).json({
       message: response

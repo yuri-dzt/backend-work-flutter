@@ -7,7 +7,7 @@ import { cacheMiddleware } from '../middlewares/cache'
 
 const router = express.Router()
 
-router.post('/poducts', CreateProductController)
+router.post('/products', CreateProductController)
 router.get('/products', cacheMiddleware, GetAllProductsController)
 router.delete('/products/:id', DeleteProductController)
 router.put('/products/:productId', ChangeProductController)

@@ -8,7 +8,7 @@ export interface ProductProps {
   updateDate?: string
 }
 
-export default async function CreateProductModel (product: ProductProps) {
+export default async function CreateProductModel(product: ProductProps) {
   const data = new Date().toISOString().slice(0, 19).replace('T', ' ')
 
   const query = `

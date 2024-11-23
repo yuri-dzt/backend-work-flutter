@@ -2,7 +2,7 @@ import connection from '../../configs/database'
 import { CreateClientFactory } from '../../factories/client'
 import { type ClientProps } from '../../types/clients'
 
-export async function createClientModel (client: ClientProps) {
+export async function createClientModel(client: ClientProps) {
   const clientAlreadyExists: string = await new Promise((resolve, reject) => {
     connection.query(`SELECT nome FROM clientes WHERE email = "${client.email}"`, (err, rows) => {
       if (err) {
@@ -11,7 +11,7 @@ export async function createClientModel (client: ClientProps) {
       }
 
       const foundClient: string = rows.length > 0 && rows[0].nome
-       resolve(foundClient) //eslint-disable-line
+      resolve(foundClient) //eslint-disable-line
     })
   })
 

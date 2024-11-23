@@ -9,9 +9,9 @@ export interface DBProductRow {
   data_atualizado: string
 }
 
-export default async function GetAllProductsModel (): Promise<ProductProps[] | null> {
+export default async function GetAllProductsModel(): Promise<ProductProps[] | null> {
   try {
-    const products: ProductProps[] | null = await new Promise((resolve, reject) => {
+    const products: ProductProps[] | [] = await new Promise((resolve, reject) => {
       connection.query('SELECT * FROM produtos', (err: any, rows: DBProductRow[]) => {
         if (err) {
           reject(err)
@@ -19,7 +19,7 @@ export default async function GetAllProductsModel (): Promise<ProductProps[] | n
         }
 
         if (rows.length === 0) {
-          resolve(null)
+          resolve([])
           return
         }
 

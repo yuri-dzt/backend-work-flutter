@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
   database: process.env.DATABASE_DB ? process.env.DATABASE_DB : 'backend_unilavras'
 })
 
-export async function connect () {
+export async function connect() {
   connection.connect((err) => {
     if (err) {
       console.error(`${'Erro ao conectar ao banco de dados'}`, (err as Error).message)
@@ -22,15 +22,15 @@ export async function connect () {
   })
 }
 
-export async function initializeDatabase () {
+export async function initializeDatabase() {
   try {
-    connection.query('CREATE DATABASE IF NOT EXISTS backend_unilavras', (err) => {
-      if (err) {
-        console.error('Erro ao criar o banco de dados:', err)
-        return
-      }
-      console.log('Banco de dados criado com sucesso!')
-    })
+    // connection.query('CREATE DATABASE IF NOT EXISTS backend_unilavras', (err) => {
+    //   if (err) {
+    //     console.error('Erro ao criar o banco de dados:', err)
+    //     return
+    //   }
+    //   console.log('Banco de dados criado com sucesso!')
+    // })
 
     connection.query('USE backend_unilavras', (err) => {
       if (err) {
