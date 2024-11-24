@@ -4,4 +4,5 @@ export interface ClientProps {
   lastname: string
   email: string
   age: number
+  photo: string
 }

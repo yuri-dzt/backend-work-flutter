@@ -6,17 +6,20 @@ class Client {
   lastname: string
   email: string
   age: number
-  constructor (id: string, client: ClientProps) {
+  photo: string
+
+  constructor(id: string, client: ClientProps) {
     this.id = id
     this.name = client.name
     this.lastname = client.lastname
     this.email = client.email
     this.age = client.age
+    this.photo = client.photo
   }
 }
 
 export class CreateClientFactory {
-  Create (client: ClientProps): Client {
+  Create(client: ClientProps): Client {
     const id = `${uuidv4()}`
     return new Client(id, client)
   }

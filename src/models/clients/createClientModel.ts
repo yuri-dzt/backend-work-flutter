@@ -17,16 +17,16 @@ export async function createClientModel(client: ClientProps) {
 
   if (clientAlreadyExists) throw new Error(`cliente já existe: ${clientAlreadyExists}`)
 
-  if (!client.name || !client.email || !client.age) {
+  if (!client.name || !client.email || !client.age || !client.photo) {
     throw new Error('Os campos nome, email e idade são obrigatórios')
   }
 
   const newClient = new CreateClientFactory().Create(client)
 
   connection.query(`
-        INSERT INTO clientes (nome, sobrenome, email, idade)
-            VALUES (?, ?, ?, ?)
-        `, [newClient.name, newClient.lastname, newClient.email, newClient.age])
+        INSERT INTO clientes (nome, sobrenome, email, idade, foto)
+            VALUES (?, ?, ?, ?, ?)
+        `, [newClient.name, newClient.lastname, newClient.email, newClient.age, newClient.photo])
 
   return newClient
 }

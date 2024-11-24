@@ -62,7 +62,7 @@ export async function initializeDatabase() {
             sobrenome VARCHAR(100),
             email VARCHAR(100) UNIQUE NOT NULL,
             idade INT NOT NULL,
-            foto VARCHAR(100)
+            foto VARCHAR(500)
         );
         `, (err) => {
       if (err) {

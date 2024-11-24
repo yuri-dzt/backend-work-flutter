@@ -9,10 +9,6 @@ export const getAllClientsModel = async (): Promise<ClientProps[] | null> => {
           reject(new Error('Erro ao pegar clientes')); return
         }
 
-        if (rows.length === 0) {
-          reject(new Error('Nenhum cliente encontrado')); return
-        }
-
         const clients: ClientProps[] = rows.map((row: any) => ({
           id: row.id,
           name: row.nome,
